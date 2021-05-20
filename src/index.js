@@ -1,17 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import Profile from "./components/Profile";
+import Register from "./components/Register";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import store from "./redux/store";
+
+import "antd/dist/antd.css";
+import "./index.scss";
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <div className="App container">
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/logout" component={Logout}></Route>
+            <Route path="/profile" component={Profile}></Route>
+            <Route path="/register" component={Register}></Route>
+          </Switch>
+        </Router>
+      </div>
+    </Provider>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector("#root"));

@@ -1,0 +1,131 @@
+@import "my_variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $my-light;
+  color: $my-grey-dark;
+}
+
+h1 {
+  font-family: cursive;
+  font-weight: 500;
+  padding-top: 5%;
+}
+
+.container {
+  margin: 5% 15%;
+}
+
+.DisplayPost,
+.ProfileInfos {
+  border: 1px solid rgba(193, 154, 91, 0.5);
+  background-color: white;
+  padding: 2%;
+  margin: 2%;
+  h3 {
+    font-family: monospace;
+    font-weight: 600;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+nav {
+  margin-bottom: 5%;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      text-transform: uppercase;
+      font-size: large;
+      font-family: monospace;
+      a {
+        text-decoration: none;
+        color: $my-brown;
+        position: relative;
+        padding-bottom: 8px;
+        &:hover,
+        &:active {
+          color: $my-grey-dark;
+          font-weight: 500;
+        }
+        &:after {
+          content: "";
+          height: 2.5px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          background: $my-grey-dark;
+          transition: 0.2s;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/********************************** Ant Design **********************************************/
+
+html {
+  --antd-wave-shadow-color: #fcfbfa;
+}
+
+.ant-form {
+  margin: 10% 15%;
+  color: $my-grey-dark;
+
+  ::placeholder {
+    font-style: italic;
+  }
+  .ant-input:hover,
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: $my-brown;
+  }
+
+  .ant-input:focus,
+  .ant-input-focused,
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused {
+    border-color: $my-brown;
+  }
+
+  .ant-btn-primary {
+    color: #fff;
+    background: $my-grey-medium;
+    border-color: $my-grey-medium;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+    &:hover {
+      background: $my-grey-dark;
+      border-color: $my-grey-dark;
+    }
+  }
+
+  .ant-btn {
+    color: $my-grey-dark;
+    font-weight: 500;
+    border: 1px solid $my-grey-dark;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+    cursor: pointer;
+    height: 32px;
+    padding: 4px 15px;
+    margin-top: 5%;
+    font-size: 14px;
+    border-radius: 0;
+    background: #fff;
+    border-color: #d9d9d9;
+    &:hover {
+      color: $my-light;
+    }
+  }
+}
