@@ -34,7 +34,7 @@ const ProfileForm = ({ dataUsername, dataDescription }) => {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
+        /* console.log(response); */
         dispatch(updateUser());
       });
   };

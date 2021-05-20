@@ -43,7 +43,7 @@ const Login = () => {
           dispatch(fetchUserSuccess(response));
           /* console.log("LoginSuccess"); */
           Cookies.set("token", response.jwt);
-          Cookies.set("userId", response.user.id)
+          Cookies.set("userId", response.user.id);
           history.push("/");
         }
       });
