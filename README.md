@@ -7,17 +7,21 @@ Il utilise l'authentification et le routing pour créer un mini réseau social.
 
 **Lancer le serveur de l'API**
 
-`git clone https://github.com/felhix/mini-api-social-network`
-`npm install`
-`npm run develop`
+```
+git clone https://github.com/felhix/mini-api-social-network
+npm install
+npm run develop
+```
 
 Ouvre [http://localhost:1337](http://localhost:1337) pour accéder à l'interface administrative de l'API.
 
 **Lancer le serveur de l'application**
 
-`git clone https://github.com/carolemny/my-social-network`
-`npm install`
-`npm run start`
+```
+git clone https://github.com/carolemny/my-social-network
+npm install
+npm run start
+```
 
 Ouvre [http://localhost:3000](http://localhost:3000) pour accéder à l'application.
 
