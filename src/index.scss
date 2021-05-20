@@ -20,19 +20,22 @@ h1 {
   margin: 5% 15%;
 }
 
-.DisplayPost,
-.ProfileInfos {
-  border: 1px solid rgba(193, 154, 91, 0.5);
-  background-color: white;
-  padding: 2%;
-  margin: 2%;
-  h3 {
-    font-family: monospace;
-    font-weight: 600;
-  }
-  div {
-    display: flex;
-    justify-content: space-between;
+.Posts {
+  padding-bottom: 5%;
+  .DisplayPost,
+  .ProfileInfos {
+    border: 1px solid rgba(193, 154, 91, 0.5);
+    background-color: white;
+    padding: 2%;
+    margin: 2%;
+    h3 {
+      font-family: monospace;
+      font-weight: 600;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
